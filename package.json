@@ -1,6 +1,6 @@
 {
   "name": "create-pace-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "bin": {
     "react-pace-app": "./bin/create-app.js"
