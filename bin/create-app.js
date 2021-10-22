@@ -44,7 +44,7 @@ if (process.argv.length < 3) {
 const ownPath = process.cwd();
 const folderName = process.argv[2];
 const appPath = path.join(ownPath, folderName);
-const repo = "https://gitlab.com/fdnetworks/fdn-boilerplate.git";
+const repo = "https://github.com/pace11/create-pace-app.git";
 
 try {
 
@@ -126,43 +126,23 @@ function buildPackageJson(packageJson, folderName) {
 	} = packageJson;
 
 	Object.assign(newPackage, {
-		name: folderName,
+		"name": folderName,
 		"version": "1.0.0",
 		"description": "",
-		"author": "",
-        "license": "MIT",
-		scripts: {
-			"check": "eslint consts/* containers/* helpers/* lib/* pages/* store/*",
-            "local": "cp .env.loc .env && next dev",
-            "dev": "cp .env.dev .env && next start",
-            "build": "next build",
-            "start": "cp .env.prod .env && next start",
+		"bin": {
+			"react-pace-app": "./bin/create-app.js"
 		},
-		devDependencies: {
-			"@fdn/navbar_header": "^1.1.18",
-            "@fdn/profile_store": "^1.0.2",
-            "@zeit/next-source-maps": "^0.0.3",
-            "cookie": "^0.4.1",
-            "next": "latest",
-            "next-redux-wrapper": "^6.0.2",
-            "prop-types": "^15.7.2",
-            "react": "^17.0.2",
-            "react-dom": "^17.0.2",
-            "react-redux": "^7.2.4",
-            "redux": "^4.1.0",
-            "redux-saga": "^1.1.3",
-            "regenerator-runtime": "^0.13.7",
+		"main": "index.js",
+		"scripts": {
+			"test": "echo \"Error: no test specified\" && exit 1"
 		},
-		dependencies: {
-			"eslint": "^7.30.0",
-            "eslint-config-airbnb": "^18.2.1",
-            "eslint-config-next": "^11.0.1",
-            "eslint-plugin-import": "^2.23.4",
-            "eslint-plugin-jsx-a11y": "^6.4.1",
-            "eslint-plugin-react": "^7.24.0",
-            "eslint-plugin-react-hooks": "^4.2.0",
-            "redux-devtools-extension": "^2.13.9",
-		},
+		"author": "pace11",
+		"license": "MIT",
+		"homepage": "https://github.com/pace11/create-pace-app",
+		"repository": {
+			"type": "git",
+			"url": "https://github.com/pace11/create-pace-app.git"
+		}
 	});
 
 	fs.writeFileSync(
