@@ -1,11 +1,19 @@
 {
-  "name": "create-try-app",
+  "name": "create-pace-app",
   "version": "1.0.0",
   "description": "",
+  "bin": {
+    "react-pace-app": "./bin/create-app.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "pace11",
-  "license": "ISC"
+  "license": "MIT",
+  "homepage": "https://github.com/pace11/create-pace-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pace11/create-pace-app.git"
+  }
 }
